@@ -79,7 +79,7 @@ const Login = () => {
       headers: { "Content-Type": "application/json"},
       body: JSON.stringify(userDetails)
     }
-    const response = await fetch("http://localhost:5000/login", options);
+    const response = await fetch("https://expensify-1-5clz.onrender.com/login", options);
     const data = await response.json();
     console.log("response", response);
     console.log("data", data);
@@ -111,7 +111,7 @@ const Login = () => {
       headers: { "Content-Type": "application/json"} ,
       body: JSON.stringify(userDetails),
     }
-    const response = await fetch("http://localhost:5000/signup", options);
+    const response = await fetch("https://expensify-1-5clz.onrender.com/signup", options);
     const data = await response.json();
     console.log("response",response)
     console.log("data",data)

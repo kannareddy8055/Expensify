@@ -24,7 +24,7 @@ const ExpenseInput = () => {
 
   try {
     const token = Cookies.get("jwt_token");
-    const res = await axios.get("http://localhost:5000/expense", {
+    const res = await axios.get("https://expensify-1-5clz.onrender.com/expense", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setExpenses(res.data);
@@ -62,12 +62,12 @@ const handleEdit = (exp) => {
 
     try {
     if (editingId) {
-      await axios.put(`http://localhost:5000/expense/${editingId}`, form, {
+      await axios.put(`https://expensify-1-5clz.onrender.com/expense/${editingId}`, form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEditingId(null); 
     } else {
-      await axios.post("http://localhost:5000/expense", form, {
+      await axios.post("https://expensify-1-5clz.onrender.com/expense", form, {
         headers: { Authorization: `Bearer ${token}` },
       });
     }
@@ -101,7 +101,7 @@ const handleEdit = (exp) => {
 
   const handleDelete = async (id) => {
     const token = Cookies.get("jwt_token");
-    await axios.delete(`http://localhost:5000/expense/${id}`, {
+    await axios.delete(`https://expensify-1-5clz.onrender.com/expense/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     
