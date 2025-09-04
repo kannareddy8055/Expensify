@@ -1,0 +1,93 @@
+/* Container */
+.expense-card-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb; /* light background */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 900px;
+}
+
+.expense-card-1:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.icon-container-1 {
+  background: #e0f2fe;
+  padding: 12px;
+  border-radius: 10px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expense-icon {
+  font-size: 20px;
+}
+
+/* Different colors for categories */
+.expense-icon.food { color: #f87171; }
+.expense-icon.clothing { color: #60a5fa; }
+.expense-icon.travel { color: #34d399; }
+.expense-icon.entertainment { color: #fbbf24; }
+.expense-icon.emi { color: #a78bfa; }
+.expense-icon.others { color: #9ca3af; }
+
+/* Details */
+.expense-details-1 {
+  flex: 1;
+}
+
+.expense-title-1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.expense-meta-1 {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Amount */
+.expense-amount-1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-right: 18px;
+  white-space: nowrap;
+}
+
+/* Actions */
+.expense-actions-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-icon-1 {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  transition: color 0.2s ease;
+}
+
+.edit-1:hover {
+  color: #3b82f6; /* blue */
+}
+
+.delete-1:hover {
+  color: #ef4444; /* red */
+}
