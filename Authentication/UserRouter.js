@@ -6,7 +6,6 @@ const promisifiedJwtVerify = promisify(jwt.verify);
 const dotenv = require("dotenv");
 dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
-console.log(JWT_SECRET)
 // Middleware to validate signup inputs
 const verifyingSignUpInputs = (req, res, next) => {
     const { name, email, password, confirmPassword } = req.body;

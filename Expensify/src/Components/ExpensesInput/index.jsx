@@ -24,7 +24,7 @@ const ExpenseInput = () => {
 
   try {
     const token = Cookies.get("jwt_token");
-    const res = await axios.get("https://expensify-2.onrender.com", {
+    const res = await axios.get("https://expensify-2.onrender.com/expense", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setExpenses(res.data);
