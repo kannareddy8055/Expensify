@@ -16,7 +16,7 @@ app.use(
     credentials: true,
   })
 );
-//F
+
 mongoose.connect(dbUrl).then(() => {
     console.log("Database connected successfully")
 }).catch((error) => {

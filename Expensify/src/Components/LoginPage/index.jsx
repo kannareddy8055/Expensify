@@ -79,7 +79,7 @@ const Login = () => {
       headers: { "Content-Type": "application/json"},
       body: JSON.stringify(userDetails)
     }
-    const response = await fetch("https://expensify-2.onrender.com/login", options);
+    const response = await fetch("https://expensify-2.onrender.com/api/login", options);
     const data = await response.json();
     console.log("response", response);
     console.log("data", data);
@@ -89,7 +89,6 @@ const Login = () => {
       setPassword("");
       setShowSubmitError(false);
       Cookies.set('jwt_token', data.jwtToken, {expires: 30000000})
-      
       setErrorMsg("");
       navigate("/");
     } else {
@@ -111,7 +110,7 @@ const Login = () => {
       headers: { "Content-Type": "application/json"} ,
       body: JSON.stringify(userDetails),
     }
-    const response = await fetch("https://expensify-2.onrender.com/signup", options);
+    const response = await fetch("https://expensify-2.onrender.com/api/signup", options);
     const data = await response.json();
     console.log("response",response)
     console.log("data",data)
@@ -135,7 +134,6 @@ const Login = () => {
     return <Navigate to="/"  />
   }
   return (
-    
     <div className="main-container">
       <div className="logo-container">
         <img className="logo" src="https://res.cloudinary.com/drskskzys/image/upload/v1756633216/Screenshot_2025-08-31_150447_ppjn74.png" alt="Logo"/>
@@ -233,5 +231,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
