@@ -12,7 +12,8 @@ const dbUrl = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.gkooz8p.mongodb.
 const cors = require("cors");
 app.use(
   cors({
-    origin: "https://expensify-xi-green.vercel.app",
+    origin:[ "https://expensify-xi-green.vercel.app",
+      "https://expensify-1ahceakgq-rajashekars-projects-a20acbe3.vercel.app"],
     credentials: true,
   })
 );
