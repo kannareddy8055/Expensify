@@ -15,8 +15,8 @@ const HomePage = () => {
                     <h1>Your Financial <br/><span className="highlight">Best Friend</span></h1>
                     <p className="subtitle-1">Track expenses like journaling, discover spending patterns, and grow your financial confidence with an app that truly cares about your money story.</p>
                     <div className="buttons">
-                        <a href="/dashboard" className="btn primary">Start Your Journey →</a>
-                        <a href="/dashboard" className="btn secondary">Learn More</a>
+                       <Link to="/dashboard"><p className="btn primary">Start Your Journey →</p></Link> 
+                        <Link to="/dashboard"><p className="btn secondary">Learn More</p></Link>
                     </div>
                 </div>
             </section>
