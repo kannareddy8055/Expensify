@@ -1,5 +1,4 @@
 import React from "react"
-import ExpenseCard from "../ExpensesCard"
 import ExpenseInput from "../ExpensesInput" 
 const Expenses = () => {
     return (

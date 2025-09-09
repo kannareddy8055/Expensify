@@ -37,13 +37,13 @@ const Dashboard = ({ expenses }) => {
 
   const monthlyData = useMemo(() => {
     const data = {};
-    expenses.forEach((exp) => {
+    filteredExpenses.forEach((exp) => {
       const d = new Date(exp.date);
       const month = d.toLocaleString("default", { month: "short" });
       data[month] = (data[month] || 0) + Number(exp.amount);
     });
     return Object.entries(data).map(([month, value]) => ({ month, value }));
-  }, [expenses]);
+  }, [filteredExpenses]);
 
   const COLORS = ["#f87171", "#60a5fa", "#34d399", "#fbbf24", "#a78bfa", "#9ca3af"];
   
@@ -117,7 +117,7 @@ const Dashboard = ({ expenses }) => {
             <img alt="img" className="logo-img" src="https://res.cloudinary.com/drskskzys/image/upload/v1756932912/Screenshot_2025-09-04_013933_yzsqaq.png" />
         </div>
         <div className="stat-details">
-            <p className="stat-value">${total ? total/filteredExpenses.length : 0}</p>
+            <p className="stat-value">${total ? Number((total/filteredExpenses.length).toFixed(2)) : 0}</p>
             <span className="stat-sub">Per expense</span>
         </div>
     </div>
